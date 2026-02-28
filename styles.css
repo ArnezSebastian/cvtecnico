@@ -1,0 +1,93 @@
+/* Estilo simple, diseño responsivo básico (adaptación a celular) y legibilidad */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header, main, footer {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/*
+h1 {
+    text-align: center;
+}
+*/
+
+header {
+    text-align: center;
+    background-color: #040418;
+    color:beige;
+}
+
+section {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    padding: 15px;
+    /*border: 2px solid #00008b; */
+    border: 2px solid #070777;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 1px #00008b, 0 0 5px #00008b, 0 0 15px #00008b;
+}
+
+main {
+    background-color:rgb(241, 241, 241);
+}
+
+
+/*lista de teconologías */
+
+a {
+    /*color: blue;*/
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    background-color: #040418
+}
+
+ul {
+    list-style-type: none;
+    display: contents;
+}
+
+li {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.pie-pagina {
+    color: white;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+@media (max-width: 600px) {
+    h1{
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        display: inline-block; margin-bottom: 8px;
+    }
+}
