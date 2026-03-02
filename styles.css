@@ -1,8 +1,20 @@
-/* Estilo simple, diseño responsivo básico (adaptación a celular) y legibilidad */
+/* Base de colores generales: */
 
+:root {
+    --colorFondoMain: rgb(241, 241, 241);
+    --colorLetrasCabecera: beige;
+    --colorFondoSecciones: rgb(255, 255, 255);
+    --colorLineasSecciones: #070777;
+    --colorResplandor: #00008b;
+    --colorFondoCabeceraYPie: #040418;
+    --colorLinks: blue;
+}
+
+/* Cuerpo de la página y secciones generales: */
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--colorFondoMain);
     margin: 0;
 }
 
@@ -12,43 +24,66 @@ header, main, footer {
     padding: 20px;
 }
 
-/*
-h1 {
-    text-align: center;
-}
-*/
-
 header {
     text-align: center;
-    background-color: #040418;
-    color:beige;
+    background-color: var(--colorFondoCabeceraYPie);
+    color: var(--colorLetrasCabecera);
+}
+
+main {
+    background-color: var(--colorFondoMain);
 }
 
 section {
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 15px;
+    background-color: var(--colorFondoSecciones);
+    margin-bottom: 10px;
     padding: 15px;
-    /*border: 2px solid #00008b; */
-    border: 2px solid #070777;
+    text-align: center;
+    border: 2px solid var(--colorLineasSecciones);
     border-radius: 5px;
     transition: all 0.5s ease;
 }
 
 section:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 1px #00008b, 0 0 5px #00008b, 0 0 15px #00008b;
+    box-shadow: 0 0 1px var(--colorResplandor), 0 0 5px var(--colorResplandor), 0 0 15px var(--colorResplandor);
 }
 
-main {
-    background-color:rgb(241, 241, 241);
+/* Animación extra: */
+
+.divisor {
+    height: 2px; /* Grosor de la línea */
+    background-color: var(--colorFondoCabeceraYPie); /* Color de la línea */
+    width: 30%; /* Ancho inicial pequeño */
+    margin: 20px auto; /* Centrado */
+    transition: width 0.4s ease-in-out; /* Animación suave */
+    border: none; /* Quitar borde por defecto del <hr> */
 }
 
+section:hover .divisor{
+    width: 100%; /* Se agranda al pasar el mouse */
+    background-color: var(--colorLineasSecciones); /* Opcional: cambia color */;
+}
 
-/*lista de teconologías */
+/* Listas: */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* display: flexbox; */
+    position: center;
+}
+
+li {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Links: */
 
 a {
-    /*color: blue;*/
-    color: darkblue;
+    color: var(--colorLinks);
     text-decoration: none;
 }
 
@@ -59,22 +94,16 @@ a:hover {
 footer {
     text-align: center;
     font-size: 14px;
-    background-color: #040418
+    background-color: var(--colorFondoCabeceraYPie);
 }
 
-ul {
-    list-style-type: none;
-    display: contents;
-}
-
-li {
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
+/* Texto del pie de página: */
 
 .pie-pagina {
     color: white;
 }
+
+/* Responsividad: */
 
 .container{
     max-width: 900px;
